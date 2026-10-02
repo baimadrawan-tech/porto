@@ -28,28 +28,28 @@ const links = [
     title: "Uploader",
     description: "Tempat upload file",
     href: "https://x.xcute.workers.dev",
-    tone: "cream",
+    tone: "maroon",
   },
   {
     emoji: "✦",
     title: "Xalixia Tools & AI",
     description: "Kumpulan website tools dan chat dengan AI",
     href: "https://www.xalixia.biz.id",
-    tone: "crimson",
+    tone: "maroon",
   },
   {
     emoji: "▦",
     title: "QR & PDF Tools",
     description: "Pembuat QR code plus tools PDF",
     href: "https://qrcode-v1-one.vercel.app/",
-    tone: "cream",
+    tone: "maroon",
   },
   {
     emoji: "💸",
     title: "Xalixia Wallet",
     description: "Pencatat keuangan",
     href: "https://xalixia-wallet.xcute.workers.dev/",
-    tone: "crimson",
+    tone: "maroon",
   },
 ] as const;
 
@@ -58,14 +58,14 @@ function Index() {
     <div className="link-hub min-h-screen overflow-hidden px-5 py-10 sm:px-8 sm:py-14">
       <svg
         aria-hidden="true"
-        className="pointer-events-none fixed -right-20 -top-16 h-64 w-64 text-star opacity-35 sm:h-80 sm:w-80"
+        className="pointer-events-none fixed -right-20 -top-16 h-64 w-64 text-near-black opacity-35 sm:h-80 sm:w-80"
         viewBox="0 0 200 200"
       >
         <path fill="currentColor" d="M100 0 120 70 190 48 137 99 200 132 126 126 130 200 96 137 45 190 68 120 0 100 70 80Z" />
       </svg>
       <svg
         aria-hidden="true"
-        className="pointer-events-none fixed -bottom-16 -left-16 h-52 w-52 text-cream opacity-20"
+        className="pointer-events-none fixed -bottom-16 -left-16 h-52 w-52 text-deep-maroon opacity-20"
         viewBox="0 0 200 200"
       >
         <path fill="currentColor" d="M100 0 120 70 190 48 137 99 200 132 126 126 130 200 96 137 45 190 68 120 0 100 70 80Z" />
@@ -80,13 +80,13 @@ function Index() {
               className="h-full w-full object-cover"
             />
           </div>
-          <p className="mb-1 font-body text-xs font-bold uppercase tracking-[0.18em] text-star">
+          <p className="mb-1 font-body text-xs font-bold uppercase tracking-[0.18em] text-near-black">
             Digital Playground
           </p>
-          <h1 className="font-display text-6xl uppercase leading-none text-cream sm:text-7xl">
+          <h1 className="font-display text-6xl uppercase leading-none text-near-black sm:text-7xl">
             Xalixia
           </h1>
-          <p className="mx-auto mt-4 max-w-sm font-body text-sm font-semibold leading-relaxed text-cream/80 sm:text-base">
+          <p className="mx-auto mt-4 max-w-sm font-body text-sm font-semibold leading-relaxed text-near-black/80 sm:text-base">
             Tools, eksperimen, dan karya digital—semuanya ada di sini.
           </p>
         </header>
@@ -100,7 +100,7 @@ function Index() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${link.title}: ${link.description} (terbuka di tab baru)`}
-                  className={`project-link ${link.tone === "crimson" ? "project-link-crimson" : "project-link-cream"}`}
+                  className={`project-link ${link.tone === "maroon" ? "project-link-maroon" : "project-link-maroon"}`}
                 >
                   <span aria-hidden="true" className="link-icon">
                     {link.emoji}
@@ -120,7 +120,7 @@ function Index() {
           </ul>
         </nav>
 
-        <footer className="mt-12 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-body text-xs font-bold uppercase text-cream/75">
+        <footer className="mt-12 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-body text-xs font-bold uppercase text-near-black/75">
           <span>© 2026 Xalixia</span>
           <span aria-hidden="true">•</span>
           <span>Dibuat dengan <span className="text-accent">♥</span></span>
