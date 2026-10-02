@@ -28,28 +28,28 @@ const links = [
     title: "Uploader",
     description: "Tempat upload file",
     href: "https://x.xcute.workers.dev",
-    tone: "cream",
+    tone: "maroon",
   },
   {
     emoji: "✦",
     title: "Xalixia Tools & AI",
     description: "Kumpulan website tools dan chat dengan AI",
     href: "https://www.xalixia.biz.id",
-    tone: "crimson",
+    tone: "maroon",
   },
   {
     emoji: "▦",
     title: "QR & PDF Tools",
     description: "Pembuat QR code plus tools PDF",
     href: "https://qrcode-v1-one.vercel.app/",
-    tone: "cream",
+    tone: "maroon",
   },
   {
     emoji: "💸",
     title: "Xalixia Wallet",
     description: "Pencatat keuangan",
     href: "https://xalixia-wallet.xcute.workers.dev/",
-    tone: "crimson",
+    tone: "maroon",
   },
 ] as const;
 
@@ -100,7 +100,7 @@ function Index() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${link.title}: ${link.description} (terbuka di tab baru)`}
-                  className={`project-link ${link.tone === "crimson" ? "project-link-crimson" : "project-link-cream"}`}
+                  className={`project-link ${link.tone === "maroon" ? "project-link-maroon" : "project-link-maroon"}`}
                 >
                   <span aria-hidden="true" className="link-icon">
                     {link.emoji}

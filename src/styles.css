@@ -10,8 +10,7 @@
  * The @theme inline block maps CSS custom properties to Tailwind utility
  * classes (e.g. --color-primary -> bg-primary, text-primary).
  *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
+ * The :root and .dark blocks define the actual color values.
  *
  * To add a new semantic color:
  * 1. Add the variable to :root (light value) and .dark (dark value)
@@ -186,12 +185,7 @@
     transition: transform 150ms ease, box-shadow 150ms ease;
   }
 
-  .project-link-cream {
-    background-color: var(--deep-maroon);
-    color: var(--off-white);
-  }
-
-  .project-link-crimson {
+  .project-link-maroon {
     background-color: var(--deep-maroon);
     color: var(--off-white);
   }
