@@ -1,24 +1,131 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+import profileAsset from "@/assets/xalixia-profile.png.asset.json";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Xalixia — Links & Projects" },
+      {
+        name: "description",
+        content: "Kumpulan proyek, tools, AI, dan karya digital Xalixia.",
+      },
+      { property: "og:title", content: "Xalixia — Links & Projects" },
+      {
+        property: "og:description",
+        content: "Temukan semua proyek dan tools digital Xalixia di satu tempat.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const links = [
+  {
+    emoji: "📤",
+    title: "Uploader",
+    description: "Tempat upload file",
+    href: "https://x.xcute.workers.dev",
+    tone: "cream",
+  },
+  {
+    emoji: "✦",
+    title: "Xalixia Tools & AI",
+    description: "Kumpulan website tools dan chat dengan AI",
+    href: "https://www.xalixia.biz.id",
+    tone: "crimson",
+  },
+  {
+    emoji: "▦",
+    title: "QR & PDF Tools",
+    description: "Pembuat QR code plus tools PDF",
+    href: "https://qrcode-v1-one.vercel.app/",
+    tone: "cream",
+  },
+  {
+    emoji: "💸",
+    title: "Xalixia Wallet",
+    description: "Pencatat keuangan",
+    href: "https://xalixia-wallet.xcute.workers.dev/",
+    tone: "crimson",
+  },
+] as const;
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="link-hub min-h-screen overflow-hidden px-5 py-10 sm:px-8 sm:py-14">
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none fixed -right-20 -top-16 h-64 w-64 text-star opacity-35 sm:h-80 sm:w-80"
+        viewBox="0 0 200 200"
+      >
+        <path fill="currentColor" d="M100 0 120 70 190 48 137 99 200 132 126 126 130 200 96 137 45 190 68 120 0 100 70 80Z" />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none fixed -bottom-16 -left-16 h-52 w-52 text-cream opacity-20"
+        viewBox="0 0 200 200"
+      >
+        <path fill="currentColor" d="M100 0 120 70 190 48 137 99 200 132 126 126 130 200 96 137 45 190 68 120 0 100 70 80Z" />
+      </svg>
+
+      <main className="relative z-10 mx-auto w-full max-w-[33rem]">
+        <header className="mb-10 text-center">
+          <div className="avatar-frame mx-auto mb-7 h-32 w-32 sm:h-36 sm:w-36">
+            <img
+              src={profileAsset.url}
+              alt="Foto profil Xalixia"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <p className="mb-1 font-body text-xs font-bold uppercase tracking-[0.18em] text-star">
+            Digital Playground
+          </p>
+          <h1 className="font-display text-6xl uppercase leading-none text-cream sm:text-7xl">
+            Xalixia
+          </h1>
+          <p className="mx-auto mt-4 max-w-sm font-body text-sm font-semibold leading-relaxed text-cream/80 sm:text-base">
+            Tools, eksperimen, dan karya digital—semuanya ada di sini.
+          </p>
+        </header>
+
+        <nav aria-label="Tautan proyek Xalixia">
+          <ul className="space-y-5">
+            {links.map((link, index) => (
+              <li key={link.href} className="link-reveal" style={{ animationDelay: `${index * 80 + 80}ms` }}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${link.title}: ${link.description} (terbuka di tab baru)`}
+                  className={`project-link ${link.tone === "crimson" ? "project-link-crimson" : "project-link-cream"}`}
+                >
+                  <span aria-hidden="true" className="link-icon">
+                    {link.emoji}
+                  </span>
+                  <span className="min-w-0 flex-1 text-left">
+                    <span className="block font-display text-2xl uppercase leading-none sm:text-[1.75rem]">
+                      {link.title}
+                    </span>
+                    <span className="mt-1 block font-body text-xs font-semibold leading-snug opacity-75 sm:text-sm">
+                      {link.description}
+                    </span>
+                  </span>
+                  <ArrowUpRight aria-hidden="true" className="h-7 w-7 shrink-0 stroke-[3]" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <footer className="mt-12 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-body text-xs font-bold uppercase text-cream/75">
+          <span>© 2026 Xalixia</span>
+          <span aria-hidden="true">•</span>
+          <span>Dibuat dengan <span className="text-accent">♥</span></span>
+        </footer>
+      </main>
     </div>
   );
 }
