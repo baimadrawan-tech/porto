@@ -24,13 +24,6 @@ export const Route = createFileRoute("/")({
 
 const links = [
   {
-    emoji: "💬",
-    title: "Kontak WhatsApp",
-    description: "Chat aku langsung via WhatsApp",
-    href: "https://wa.me/message/WVMCXAZZNVXEP1",
-    tone: "maroon",
-  },
-  {
     emoji: "📤",
     title: "Uploader",
     description: "Tempat upload file",
@@ -56,6 +49,13 @@ const links = [
     title: "Xalixia Wallet",
     description: "Pencatat keuangan",
     href: "https://xalixia-wallet.xcute.workers.dev/",
+    tone: "maroon",
+  },
+  {
+    emoji: "💬",
+    title: "Kontak WhatsApp",
+    description: "Chat aku langsung via WhatsApp",
+    href: "https://wa.me/message/WVMCXAZZNVXEP1",
     tone: "maroon",
   },
 ] as const;
