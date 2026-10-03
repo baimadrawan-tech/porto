@@ -52,6 +52,13 @@ const links = [
     tone: "maroon",
   },
   {
+    emoji: "🧾",
+    title: "QRIS Xalixia",
+    description: "Web support admin Xalixia",
+    href: "https://qris-xalixia.xcute.workers.dev",
+    tone: "maroon",
+  },
+  {
     emoji: "💬",
     title: "Kontak WhatsApp",
     description: "Chat aku langsung via WhatsApp",
