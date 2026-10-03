@@ -45,10 +45,10 @@ const links = [
     tone: "maroon",
   },
   {
-    emoji: "💸",
-    title: "Xalixia Wallet",
-    description: "Pencatat keuangan",
-    href: "https://xalixia-wallet.xcute.workers.dev/",
+    emoji: "🧾",
+    title: "QRIS Xalixia",
+    description: "Web support admin Xalixia",
+    href: "https://qris-xalixia.xcute.workers.dev",
     tone: "maroon",
   },
   {
