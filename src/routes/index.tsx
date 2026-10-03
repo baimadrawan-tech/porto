@@ -59,6 +59,13 @@ const links = [
     tone: "maroon",
   },
   {
+    emoji: "💌",
+    title: "Appslovv",
+    description: "Web bucin untuk kamu dan pasangan",
+    href: "https://appslovv.xcute.workers.dev",
+    tone: "maroon",
+  },
+  {
     emoji: "💬",
     title: "Kontak WhatsApp",
     description: "Chat aku langsung via WhatsApp",
