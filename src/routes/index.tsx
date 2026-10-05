@@ -66,6 +66,13 @@ const links = [
     tone: "maroon",
   },
   {
+    emoji: "🖥️",
+    title: "Jasa Pembuatan Website",
+    description: "Paket website mulai Rp70K, cepat & responsive",
+    href: "https://x.xcute.workers.dev/f/images/c6f6205144be.jpg",
+    tone: "maroon",
+  },
+  {
     emoji: "💬",
     title: "Kontak WhatsApp",
     description: "Chat aku langsung via WhatsApp",
