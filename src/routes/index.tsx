@@ -66,17 +66,17 @@ const links = [
     tone: "maroon",
   },
   {
-    emoji: "🖥️",
-    title: "Jasa Pembuatan Website",
-    description: "Paket website mulai Rp70K, cepat & responsive",
-    href: "https://x.xcute.workers.dev/f/images/c6f6205144be.jpg",
-    tone: "maroon",
-  },
-  {
     emoji: "🎵",
     title: "TikTok Downloader",
     description: "Unduh video TikTok tanpa watermark",
     href: "https://tiktok-downloader.xcute.workers.dev",
+    tone: "maroon",
+  },
+  {
+    emoji: "🖥️",
+    title: "Jasa Pembuatan Website",
+    description: "Paket website mulai Rp70K, cepat & responsive",
+    href: "https://x.xcute.workers.dev/f/images/c6f6205144be.jpg",
     tone: "maroon",
   },
   {
