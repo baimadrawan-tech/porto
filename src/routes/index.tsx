@@ -90,30 +90,30 @@ const links = [
 
 function Index() {
   return (
-    <div className="link-hub min-h-screen overflow-hidden px-5 py-10 sm:px-8 sm:py-14">
+    <div className="link-hub min-h-screen overflow-hidden px-4 py-6 sm:px-8 sm:py-10">
 
-      <main className="relative z-10 mx-auto w-full max-w-[33rem]">
-        <header className="mb-10 text-center">
-          <div className="avatar-frame mx-auto mb-7 h-32 w-32 sm:h-36 sm:w-36">
+      <main className="relative z-10 mx-auto w-full max-w-[30rem]">
+        <header className="mb-6 text-center">
+          <div className="avatar-frame mx-auto mb-4 h-20 w-20 sm:h-24 sm:w-24">
             <img
               src={profileAsset.url}
               alt="Foto profil Xalixia"
               className="h-full w-full object-cover"
             />
           </div>
-          <p className="mb-1 font-body text-xs font-bold uppercase tracking-[0.18em] text-near-black">
+          <p className="mb-1 font-body text-[0.65rem] font-bold uppercase tracking-[0.2em] text-near-black">
             Digital Playground
           </p>
-          <h1 className="font-display text-6xl uppercase leading-none text-near-black sm:text-7xl">
+          <h1 className="font-display text-4xl uppercase leading-none text-near-black sm:text-5xl">
             Xalixia
           </h1>
-          <p className="mx-auto mt-4 max-w-sm font-body text-sm font-semibold leading-relaxed text-near-black/80 sm:text-base">
+          <p className="mx-auto mt-3 max-w-xs font-body text-xs font-semibold leading-relaxed text-near-black/80 sm:text-sm">
             Tools, eksperimen, dan karya digital—semuanya ada di sini.
           </p>
         </header>
 
         <nav aria-label="Tautan proyek Xalixia">
-          <ul className="space-y-5">
+          <ul className="space-y-3">
             {links.map((link, index) => (
               <li key={link.href} className="link-reveal" style={{ animationDelay: `${index * 80 + 80}ms` }}>
                 <a
@@ -127,21 +127,21 @@ function Index() {
                     {link.emoji}
                   </span>
                   <span className="min-w-0 flex-1 text-left">
-                    <span className="block font-display text-2xl uppercase leading-none sm:text-[1.75rem]">
+                    <span className="block font-display text-base uppercase leading-tight sm:text-lg">
                       {link.title}
                     </span>
-                    <span className="mt-1 block font-body text-xs font-semibold leading-snug opacity-75 sm:text-sm">
+                    <span className="mt-0.5 block font-body text-[0.7rem] font-semibold leading-snug opacity-75 sm:text-xs">
                       {link.description}
                     </span>
                   </span>
-                  <ArrowUpRight aria-hidden="true" className="h-7 w-7 shrink-0 stroke-[3]" />
+                  <ArrowUpRight aria-hidden="true" className="h-5 w-5 shrink-0 stroke-[3]" />
                 </a>
               </li>
             ))}
           </ul>
         </nav>
 
-        <footer className="mt-12 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-body text-xs font-bold uppercase text-near-black/75">
+        <footer className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-body text-[0.65rem] font-bold uppercase text-near-black/75">
           <span>© 2026 Xalixia</span>
           <span aria-hidden="true">•</span>
           <span>Dibuat dengan <span className="text-accent">♥</span></span>
