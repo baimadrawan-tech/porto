@@ -91,20 +91,6 @@ const links = [
 function Index() {
   return (
     <div className="link-hub min-h-screen overflow-hidden px-5 py-10 sm:px-8 sm:py-14">
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none fixed -right-20 -top-16 h-64 w-64 text-near-black opacity-35 sm:h-80 sm:w-80"
-        viewBox="0 0 200 200"
-      >
-        <path fill="currentColor" d="M100 0 120 70 190 48 137 99 200 132 126 126 130 200 96 137 45 190 68 120 0 100 70 80Z" />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none fixed -bottom-16 -left-16 h-52 w-52 text-deep-maroon opacity-20"
-        viewBox="0 0 200 200"
-      >
-        <path fill="currentColor" d="M100 0 120 70 190 48 137 99 200 132 126 126 130 200 96 137 45 190 68 120 0 100 70 80Z" />
-      </svg>
 
       <main className="relative z-10 mx-auto w-full max-w-[33rem]">
         <header className="mb-10 text-center">
